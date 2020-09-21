@@ -14,3 +14,26 @@ query {
   })
 }
 ```
+
+# Expected behavior
+Size validation errors for givenName and title
+
+
+# Current response
+```json
+{
+  "errors": [
+    {
+      "message": "/requestNullable/nameRequest/givenName size must be between 1 and 1"
+    },
+    {
+      "message": "/requestNullable/nameRequest/title size must be between 1 and 1"
+    }
+  ],
+  "extensions": {},
+  "data": {
+    "requestNullable": null,
+    "requestNonNullable": "Hello world"
+  }
+}
+```
