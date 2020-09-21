@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: sample-graph
+  servlet:
+    multipart:
+      enabled: true
+      location: /tmp
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types: application/json, gzip
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: health,info,metrics
+
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    tracing-enabled: true
+    actuator-metrics: true
+    exception-handlers-enabled: true
+  #  max-query-depth: true
+  #  maxQueryDepth: 4
+  #  max-query-complexity: true
+  #  maxQueryComplexity: 2
+
+  playground:
+    mapping: /playground
+    endpoint: /graphql
+    pageTitle: Playground
+    enabled: true
+    cdn:
+      enabled: true
