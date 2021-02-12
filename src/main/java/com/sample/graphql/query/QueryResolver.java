@@ -16,4 +16,8 @@ public class QueryResolver implements GraphQLQueryResolver {
   public String getRequestNonNullable(NameRequest nameRequest) {
     return "Hello world";
   }
+
+  public Long getReturnLong() {
+    return 1L;
+  }
 }

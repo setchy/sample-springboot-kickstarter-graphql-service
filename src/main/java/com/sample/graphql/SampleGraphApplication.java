@@ -1,5 +1,7 @@
 package com.sample.graphql;
 
+import graphql.Scalars;
+import graphql.schema.GraphQLScalarType;
 import graphql.validation.rules.OnValidationErrorStrategy;
 import graphql.validation.rules.ValidationRules;
 import graphql.validation.schemawiring.ValidationSchemaWiring;
@@ -24,6 +26,11 @@ public class SampleGraphApplication {
     ValidationSchemaWiring schemaWiring = new ValidationSchemaWiring(validationRules);
 
     return schemaWiring;
+  }
+
+  @Bean
+  GraphQLScalarType longScalar() {
+    return Scalars.GraphQLLong;
   }
 
 }

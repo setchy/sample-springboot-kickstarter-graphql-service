@@ -1,9 +1,12 @@
 directive @Size(min : Int = 0, max : Int = 2147483647, message : String = "graphql.validation.Size.message") on ARGUMENT_DEFINITION | INPUT_FIELD_DEFINITION
 
+scalar Long
+
 "Queries"
 type Query {
     requestNullable( nameRequest : NameRequest) : String
     requestNonNullable( nameRequest : NameRequest!) : String
+    returnLong : Long
 
 }
 
