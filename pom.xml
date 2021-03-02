@@ -20,8 +20,8 @@
   <properties>
     <java.version>13</java.version>
     <graphql-java-kickstart.version>11.0.0</graphql-java-kickstart.version>
-    <org.projectlombok.version>1.18.12</org.projectlombok.version>
-    <graphql-java-extended-validation.version>15.0.3</graphql-java-extended-validation.version>
+    <org.projectlombok.version>1.18.18</org.projectlombok.version>
+    <graphql-java-extended-validation.version>16.0.0</graphql-java-extended-validation.version>
   </properties>
 
   <dependencies>
@@ -59,7 +59,7 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>26.0-jre</version>
+      <version>30.1-jre</version>
     </dependency>
 
     <!-- Extended Validations -->
