@@ -6,7 +6,7 @@
     {
           "groupName": "GraphQL Java",
           "matchPackagePrefixes": ["com.graphql-java:"],
-          "matchUpdateTypes": ["major", "minor", "patch"]
+          "matchUpdateTypes": ["major", "minor"]
       }
   ]
 }
