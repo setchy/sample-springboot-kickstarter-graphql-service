@@ -1,5 +1,12 @@
 {
   "extends": [
     "config:base"
+  ],
+  "packageRules": [
+    {
+          "groupName": "GraphQL Java",
+          "matchPackagePrefixes": ["com.graphql-java:"],
+          "matchUpdateTypes": ["major", "minor", "patch"]
+      }
   ]
 }
