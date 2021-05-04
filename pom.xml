@@ -21,7 +21,7 @@
     <java.version>13</java.version>
     <graphql-java-kickstart.version>11.0.0</graphql-java-kickstart.version>
     <org.projectlombok.version>1.18.20</org.projectlombok.version>
-    <graphql-java-extended-validation.version>16.0.0</graphql-java-extended-validation.version>
+    <graphql-java-extended-validation.version>2021-03-30T02-55-32-82c8446</graphql-java-extended-validation.version>
   </properties>
 
   <dependencies>
