@@ -7,7 +7,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.5.1</version>
+    <version>2.6.0</version>
   </parent>
 
   <groupId>com.sample</groupId>
@@ -18,10 +18,11 @@
   <description>Sample GraphQL Springboot Kickstarter Service</description>
 
   <properties>
-    <java.version>13</java.version>
-    <graphql-java-kickstart.version>11.1.0</graphql-java-kickstart.version>
+    <java.version>17</java.version>
+    <graphql-java-kickstart.version>12.0.0</graphql-java-kickstart.version>
     <org.projectlombok.version>1.18.22</org.projectlombok.version>
-    <graphql-java-extended-validation.version>16.0.0</graphql-java-extended-validation.version>
+    <graphql-java-extended-validation.version>17.0-hibernate-validator-6.2.0.Final</graphql-java-extended-validation.version>
+    <graphql-java-extended-scalars.version>17.0</graphql-java-extended-scalars.version>
   </properties>
 
   <dependencies>
@@ -38,28 +39,17 @@
       <version>${graphql-java-kickstart.version}</version>
     </dependency>
 
-    <!-- Embedded GraphQL Tooling -->
-    <dependency>
-      <groupId>com.graphql-java-kickstart</groupId>
-      <artifactId>playground-spring-boot-starter</artifactId>
-      <version>${graphql-java-kickstart.version}</version>
-    </dependency>
-
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>${org.projectlombok.version}</version>
     </dependency>
 
+    <!-- Extended Validations -->
     <dependency>
-      <groupId>org.springframework.retry</groupId>
-      <artifactId>spring-retry</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>31.0.1-jre</version>
+      <groupId>com.graphql-java</groupId>
+      <artifactId>graphql-java-extended-scalars</artifactId>
+      <version>${graphql-java-extended-scalars.version}</version>
     </dependency>
 
     <!-- Extended Validations -->
@@ -67,19 +57,6 @@
       <groupId>com.graphql-java</groupId>
       <artifactId>graphql-java-extended-validation</artifactId>
       <version>${graphql-java-extended-validation.version}</version>
-    </dependency>
-
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>org.junit.vintage</groupId>
-          <artifactId>junit-vintage-engine</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
   </dependencies>
 

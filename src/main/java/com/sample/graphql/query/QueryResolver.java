@@ -1,6 +1,8 @@
 package com.sample.graphql.query;
 
+import com.sample.graphql.model.Cat;
 import com.sample.graphql.model.NameRequest;
+import com.sample.graphql.model.Pet;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.springframework.stereotype.Component;
 
@@ -19,5 +21,11 @@ public class QueryResolver implements GraphQLQueryResolver {
 
   public Long getReturnLong() {
     return 1L;
+  }
+
+  public Pet getRequestPet() {
+    Cat myCat = new Cat();
+    myCat.setCatName("Felix");
+    return myCat;
   }
 }

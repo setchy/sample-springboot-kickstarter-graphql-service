@@ -1,10 +1,15 @@
 package com.sample.graphql;
 
+import com.sample.graphql.model.Cat;
+import com.sample.graphql.model.Dog;
 import graphql.Scalars;
+import graphql.kickstart.tools.SchemaParserDictionary;
+import graphql.scalars.ExtendedScalars;
 import graphql.schema.GraphQLScalarType;
 import graphql.validation.rules.OnValidationErrorStrategy;
 import graphql.validation.rules.ValidationRules;
 import graphql.validation.schemawiring.ValidationSchemaWiring;
+import java.util.HashMap;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -30,7 +35,16 @@ public class SampleGraphApplication {
 
   @Bean
   GraphQLScalarType longScalar() {
-    return Scalars.GraphQLLong;
+    return ExtendedScalars.GraphQLLong;
   }
 
+  @Bean
+  public SchemaParserDictionary getSchemaParser() {
+    SchemaParserDictionary dictionary = new SchemaParserDictionary();
+    dictionary.add(new HashMap() {{
+      put("Cat", Cat.class);
+      put("Dog", Dog.class);
+    }});
+    return dictionary;
+  }
 }

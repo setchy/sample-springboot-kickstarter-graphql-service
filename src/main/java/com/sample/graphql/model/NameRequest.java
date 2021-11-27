@@ -10,5 +10,5 @@ public class NameRequest {
   private String title;
   private String givenName;
   private String middleName;
-  private String surName;
+  private String lastName;
 }
